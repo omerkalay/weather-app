@@ -38,11 +38,12 @@ document.addEventListener('click', (e) => {
 
 // Initialize with default city
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, starting Istanbul weather fetch...');
     // Hide error message initially
     hideError();
     updateDateTime();
     
-    // Get real weather data
+    // Get real weather data for Istanbul
     getWeather('Istanbul');
 });
 
@@ -194,13 +195,15 @@ async function getWeatherByCoords(lat, lon, cityName) {
 async function getWeather(city = null) {
     const cityName = city || searchInput.value.trim();
     
+    console.log('getWeather called with city:', cityName);
+    
     if (!cityName) {
         showError('Please enter a city name.');
         return;
     }
     
-    // Check if we're already showing this city
-    if (cityElement.textContent === cityName) {
+    // Check if we're already showing this city (only for search, not initial load)
+    if (cityElement.textContent === cityName && cityElement.textContent !== '') {
         console.log('Already showing weather for:', cityName);
         return; // Don't fetch again if it's the same city
     }
@@ -211,8 +214,14 @@ async function getWeather(city = null) {
     hideError();
 
     try {
+        console.log('Fetching weather data for:', cityName);
         // Get weather data directly by city name
         const weatherData = await fetchWeatherData(`/forecast.json?q=${cityName}&days=4&aqi=no`);
+        
+        console.log('Weather data received:', weatherData);
+        console.log('Weather icon URL:', weatherData.current.condition.icon);
+        console.log('Forecast data:', weatherData.forecast);
+        console.log('Forecast days:', weatherData.forecast.forecastday);
         
         displayWeather(weatherData);
         displayForecast(weatherData);
@@ -253,6 +262,13 @@ function displayWeather(data) {
     
     weatherIcon.onerror = function() {
         console.error('Failed to load weather icon:', secureIconUrl);
+        // Set a fallback icon
+        weatherIcon.src = 'icon.png';
+    };
+    
+    // Add onload handler to confirm successful loading
+    weatherIcon.onload = function() {
+        console.log('Weather icon loaded successfully:', secureIconUrl);
     };
     
     // Update favicon with current weather icon
