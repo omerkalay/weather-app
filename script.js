@@ -19,13 +19,7 @@ const forecastContainer = document.getElementById('forecast-container');
 const errorMessage = document.getElementById('error-message');
 const loadingElement = document.getElementById('loading');
 
-// Event Listeners
-searchBtn.addEventListener('click', getWeather);
-searchInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        getWeather();
-    }
-});
+// Event Listeners - Only dropdown selection
 
 // Search input event listeners for autocomplete
 searchInput.addEventListener('input', debounce(handleSearchInput, 300));
@@ -204,13 +198,21 @@ async function getWeather(city = null) {
         showError('Please enter a city name.');
         return;
     }
+    
+    // Check if we're already showing this city
+    if (cityElement.textContent === cityName) {
+        console.log('Already showing weather for:', cityName);
+        return; // Don't fetch again if it's the same city
+    }
+    
 
+    
     showLoading(true);
     hideError();
 
     try {
         // Get weather data directly by city name
-        const weatherData = await fetchWeatherData(`/forecast.json?q=${cityName}&days=5&aqi=no`);
+        const weatherData = await fetchWeatherData(`/forecast.json?q=${cityName}&days=4&aqi=no`);
         
         displayWeather(weatherData);
         displayForecast(weatherData);
