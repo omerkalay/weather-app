@@ -255,6 +255,12 @@ function displayWeather(data) {
         console.error('Failed to load weather icon:', secureIconUrl);
     };
     
+    // Update favicon with current weather icon
+    const favicon = document.getElementById('favicon');
+    if (favicon) {
+        favicon.href = secureIconUrl;
+    }
+    
     // Update weather stats
     feelsLikeElement.textContent = `${Math.round(data.current.feelslike_c)}°C`;
     humidityElement.textContent = `${data.current.humidity}%`;
