@@ -4,6 +4,12 @@ A sleek, modern weather application with a dark theme design. Built with vanilla
 
 🤖 **AI-Assisted Development**: This project was developed with the assistance of AI tools for rapid prototyping and modern design implementation.
 
+## 🌐 Live Demo
+
+**Live Website**: [https://omerkalay.com/weather-app/](https://omerkalay.com/weather-app/)
+
+⚠️ **Note**: The live demo may not always work due to API token expiration or rate limits. For the best experience, clone the repository and use your own API key.
+
 ## ✨ Features
 
 - 🌍 **City Search**: Get weather information for any city worldwide with autocomplete
@@ -32,7 +38,10 @@ cd weather-app
 const API_KEY = 'YOUR_API_KEY_HERE'; // Replace with your WeatherAPI.com key
 ```
 
-⚠️ **Important**: The current API key in the code is for demonstration purposes and may not work for you. Please get your own free API key from WeatherAPI.com.
+⚠️ **Important**: 
+- The current API key in the code is for demonstration purposes and may not work for you
+- API tokens have expiration dates and rate limits
+- Please get your own free API key from WeatherAPI.com for reliable access
 
 ### 4. Open the Application
 - Simply open `index.html` in your web browser
