@@ -1,0 +1,71 @@
+# 🌤️ Modern Weather App
+
+A sleek, modern weather application with a dark theme design. Built with vanilla web technologies and powered by **WeatherAPI.com** for real-time weather data.
+
+## ✨ Features
+
+- 🌍 **City Search**: Get weather information for any city worldwide with autocomplete
+- 🌡️ **Current Weather**: Temperature, feels like, humidity, wind speed, and visibility
+- 📅 **4-Day Forecast**: Detailed weather forecast with high/low temperatures
+- 🎨 **Modern UI**: Dark theme with glassmorphism effects
+- 📱 **Responsive Design**: Works perfectly on all devices
+
+## 🚀 Quick Start
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/weather-app.git
+cd weather-app
+```
+
+### 2. Get Your API Key
+- Go to [WeatherAPI.com](https://www.weatherapi.com/)
+- Sign up for a free account
+- Navigate to your account dashboard to find your API key
+
+### 3. Configure API Key
+- Open `script.js` file
+- Replace the existing API key with your own:
+```javascript
+const API_KEY = 'YOUR_API_KEY_HERE'; // Replace with your WeatherAPI.com key
+```
+
+⚠️ **Important**: The current API key in the code is for demonstration purposes and may not work for you. Please get your own free API key from WeatherAPI.com.
+
+### 4. Open the Application
+- Simply open `index.html` in your web browser
+
+## 🛠️ Technologies Used
+
+- **HTML5**: Structure
+- **CSS3**: Styling (Glassmorphism, Flexbox, Grids)
+- **JavaScript (ES6+)**: Logic and API integration
+- **WeatherAPI.com**: Weather data API
+- **Font Awesome**: Icons
+- **Google Fonts (Inter)**: Typography
+
+## 📁 File Structure
+
+```
+weather-app/
+├── index.html          # Main HTML file
+├── style.css           # CSS styles
+├── script.js           # JavaScript code
+├── README.md           # Project documentation
+└── .gitignore          # Git ignore file
+```
+
+## 🎯 Usage
+
+1. Enter a city name in the search box
+2. Select from the dropdown suggestions
+3. View current weather information
+4. Check the 4-day forecast with high/low temperatures
+
+## 🤝 Contributing
+
+Feel free to fork the repository, create pull requests, or open issues for any suggestions or bug reports.
+
+## 📄 License
+
+This project is open source and available under the MIT License. 
