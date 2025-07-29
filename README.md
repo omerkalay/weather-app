@@ -2,6 +2,8 @@
 
 A sleek, modern weather application with a dark theme design. Built with vanilla web technologies and powered by **WeatherAPI.com** for real-time weather data.
 
+🤖 **AI-Assisted Development**: This project was developed with the assistance of AI tools for rapid prototyping and modern design implementation.
+
 ## ✨ Features
 
 - 🌍 **City Search**: Get weather information for any city worldwide with autocomplete
@@ -14,7 +16,7 @@ A sleek, modern weather application with a dark theme design. Built with vanilla
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/weather-app.git
+git clone https://github.com/omerkalay/weather-app.git
 cd weather-app
 ```
 
@@ -52,6 +54,7 @@ weather-app/
 ├── style.css           # CSS styles
 ├── script.js           # JavaScript code
 ├── README.md           # Project documentation
+├── LICENSE             # MIT License
 └── .gitignore          # Git ignore file
 ```
 
@@ -68,4 +71,8 @@ Feel free to fork the repository, create pull requests, or open issues for any s
 
 ## 📄 License
 
-This project is open source and available under the MIT License. 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+**Note**: This project was developed with AI assistance to demonstrate modern web development practices and rapid prototyping capabilities. 
