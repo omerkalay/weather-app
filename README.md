@@ -1,24 +1,22 @@
-# 🌤️ Modern Weather App
+# Weather App
 
-A sleek, modern weather application with a dark theme design. Built with vanilla web technologies and powered by **WeatherAPI.com** for real-time weather data.
+A sleek, modern weather application with a professional Crystal UI design. Built with vanilla web technologies and powered by WeatherAPI.com for real-time weather data.
 
-🤖 **AI-Assisted Development**: This project was developed with the assistance of AI tools for rapid prototyping and modern design implementation.
-
-## 🌐 Live Demo
+## Live Demo
 
 **Live Website**: [https://omerkalay.com/weather-app/](https://omerkalay.com/weather-app/)
 
-⚠️ **Note**: The live demo may not always work due to API token expiration or rate limits. For the best experience, clone the repository and use your own API key.
+Note: The live demo may not always work due to API token expiration or rate limits. For the best experience, clone the repository and use your own API key.
 
-## ✨ Features
+## Features
 
-- 🌍 **City Search**: Get weather information for any city worldwide with autocomplete
-- 🌡️ **Current Weather**: Temperature, feels like, humidity, wind speed, and visibility
-- 📅 **4-Day Forecast**: Detailed weather forecast with high/low temperatures
-- 🎨 **Modern UI**: Dark theme with glassmorphism effects
-- 📱 **Responsive Design**: Works perfectly on all devices
+- **City Search**: Get weather information for any city worldwide with autocomplete.
+- **Current Weather**: Temperature, feels like, humidity, wind speed, and visibility.
+- **3-Day Forecast**: Detailed weather forecast with high/low temperatures.
+- **Crystal UI**: Premium dark theme with sharp borders and glassmorphism effects.
+- **Responsive Design**: Works perfectly on all devices.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone the Repository
 ```bash
@@ -38,24 +36,24 @@ cd weather-app
 const API_KEY = 'YOUR_API_KEY_HERE'; // Replace with your WeatherAPI.com key
 ```
 
-⚠️ **Important**: 
-- The current API key in the code is for demonstration purposes and may not work for you
-- API tokens have expiration dates and rate limits
-- Please get your own free API key from WeatherAPI.com for reliable access
+**Important**: 
+- The current API key in the code is for demonstration purposes and may not work for you.
+- API tokens have expiration dates and rate limits.
+- Please get your own free API key from WeatherAPI.com for reliable access.
 
 ### 4. Open the Application
-- Simply open `index.html` in your web browser
+- Simply open `index.html` in your web browser.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **HTML5**: Structure
-- **CSS3**: Styling (Glassmorphism, Flexbox, Grids)
+- **CSS3**: Styling (Crystal UI, Flexbox, Grids)
 - **JavaScript (ES6+)**: Logic and API integration
 - **WeatherAPI.com**: Weather data API
-- **Font Awesome**: Icons
-- **Google Fonts (Inter)**: Typography
+- **Phosphor Icons**: High-quality vector icons
+- **Google Fonts (Inter & Outfit)**: Typography
 
-## 📁 File Structure
+## File Structure
 
 ```
 weather-app/
@@ -67,21 +65,17 @@ weather-app/
 └── .gitignore          # Git ignore file
 ```
 
-## 🎯 Usage
+## Usage
 
-1. Enter a city name in the search box
-2. Select from the dropdown suggestions
-3. View current weather information
-4. Check the 4-day forecast with high/low temperatures
+1. Enter a city name in the search box.
+2. Select from the dropdown suggestions.
+3. View current weather information.
+4. Check the 3-day forecast with high/low temperatures.
 
-## 🤝 Contributing
+## Contributing
 
 Feel free to fork the repository, create pull requests, or open issues for any suggestions or bug reports.
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-**Note**: This project was developed with AI assistance to demonstrate modern web development practices and rapid prototyping capabilities. 

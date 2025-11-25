@@ -1,115 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="icon" type="image/png" id="favicon" href="icon.png">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Google Fonts: Inter & Outfit -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
+    <div class="background-gradient"></div>
+    <div class="background-blur"></div>
+
+    <div class="app-container">
+        <!-- Header & Search -->
         <header class="app-header">
-            <h1 class="app-title">
-                <i class="fas fa-cloud-sun"></i>
-                Weather App
-            </h1>
+            <div class="search-container">
+                <div class="search-input-group">
+                    <i class="ph ph-magnifying-glass search-icon"></i>
+                    <input type="text" placeholder="Search city..." spellcheck="false" id="search-input"
+                        autocomplete="off">
+                    <div class="search-dropdown" id="search-results">
+                        <!-- Results injected here -->
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <div class="search-box">
-            <div class="search-input-wrapper">
-                <i class="fas fa-search search-icon"></i>
-                <input type="text" placeholder="Enter city name..." spellcheck="false" id="search-input">
-                <div class="search-results" id="search-results">
-                    <!-- Search results will appear here -->
-                </div>
-            </div>
-        </div>
-
-        <div class="weather-box">
-            <div class="weather-info">
-                <div class="location">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span id="city"></span>
-                </div>
-                <div class="date" id="date">Monday, January 1</div>
-            </div>
-
-            <div class="weather-details">
-                <div class="current-weather">
-                    <div class="weather-icon-container">
-                        <img src="" alt="weather" id="weather-icon">
+        <!-- Main Content -->
+        <main class="weather-dashboard">
+            <!-- Current Weather Card -->
+            <div class="current-weather-card">
+                <div class="weather-header">
+                    <div class="location-badge">
+                        <i class="ph ph-map-pin"></i>
+                        <span id="city">--</span>
                     </div>
-                    <div class="temperature">
-                        <span id="temp"></span>°C
-                    </div>
-                    <div class="description" id="description"></div>
+                    <div class="date-badge" id="date">--</div>
                 </div>
 
-                <div class="weather-stats">
-                    <div class="stat">
-                        <div class="stat-icon">
-                            <i class="fas fa-thermometer-half"></i>
-                        </div>
-                        <div class="stat-content">
-                            <span class="label">Feels Like</span>
-                            <span class="value" id="feels-like"></span>
+                <div class="weather-main">
+                    <div class="weather-icon-wrapper">
+                        <img src="" alt="Weather Icon" id="weather-icon">
+                    </div>
+                    <div class="temp-wrapper">
+                        <span id="temp">--</span><span class="unit">°</span>
+                    </div>
+                    <div class="weather-desc" id="description">--</div>
+                </div>
+
+                <div class="weather-stats-row">
+                    <div class="stat-item">
+                        <i class="ph ph-wind"></i>
+                        <div class="stat-info">
+                            <span class="stat-value" id="wind">--</span>
+                            <span class="stat-label">Wind</span>
                         </div>
                     </div>
-                    <div class="stat">
-                        <div class="stat-icon">
-                            <i class="fas fa-tint"></i>
-                        </div>
-                        <div class="stat-content">
-                            <span class="label">Humidity</span>
-                            <span class="value" id="humidity"></span>
+                    <div class="stat-item">
+                        <i class="ph ph-drop"></i>
+                        <div class="stat-info">
+                            <span class="stat-value" id="humidity">--</span>
+                            <span class="stat-label">Humidity</span>
                         </div>
                     </div>
-                    <div class="stat">
-                        <div class="stat-icon">
-                            <i class="fas fa-wind"></i>
-                        </div>
-                        <div class="stat-content">
-                            <span class="label">Wind</span>
-                            <span class="value" id="wind"></span>
-                        </div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <div class="stat-content">
-                            <span class="label">Visibility</span>
-                            <span class="value" id="visibility"></span>
+                    <div class="stat-item">
+                        <i class="ph ph-eye"></i>
+                        <div class="stat-info">
+                            <span class="stat-value" id="visibility">--</span>
+                            <span class="stat-label">Visibility</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="forecast">
-            <h3 class="forecast-title">
-                <i class="fas fa-calendar-alt"></i>
-                4-Day Forecast
-            </h3>
-            <div class="forecast-container" id="forecast-container">
-                <!-- Forecast cards will be added here -->
+            <!-- Forecast Section -->
+            <div class="forecast-section">
+                <h3 class="section-title">3-Day Forecast</h3>
+                <div class="forecast-grid" id="forecast-container">
+                    <!-- Forecast items injected here -->
+                </div>
             </div>
-        </div>
+        </main>
 
-        <div class="error-message" id="error-message">
-            <i class="fas fa-exclamation-triangle"></i>
-            <span>City not found. Please enter a valid city name.</span>
-        </div>
-
-        <div class="loading" id="loading">
+        <!-- Loading & Error States -->
+        <div class="status-message" id="loading">
             <div class="spinner"></div>
-            <div class="loading-text">Loading weather data...</div>
+            <span>Updating...</span>
+        </div>
+
+        <div class="status-message error" id="error-message">
+            <i class="ph ph-warning-circle"></i>
+            <span id="error-text">City not found</span>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-</html> 
+
+</html>
